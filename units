@@ -1,0 +1,213 @@
+package ancientruins.units;
+
+
+final public class Archer extends mainUnit {
+    private String name;
+    private int health;
+    private int attack;
+    private int movement;
+    private int range;
+    
+    
+public Archer (){
+    super();
+    name = "";
+    health = 0;
+    attack = 0;
+    movement = 0;
+    range = 0;
+}
+
+public Archer (String name, int health, int attack, int movement, int range){
+    name = "Archer";
+    health = 2;
+    attack = 2;
+    movement = 6;
+    range = 2;
+    
+}   
+}
+
+------------------------------------
+
+package ancientruins.units;
+
+
+final public class Cavalry extends mainUnit {
+    private String name;
+    private int health;
+    private int attack;
+    private int movement;
+    private int range;
+    
+    
+public Cavalry (){
+    super();
+    name = "";
+    health = 0;
+    attack = 0;
+    movement = 0;
+    range = 0;
+}
+
+public Cavalry (String name, int health, int attack, int movement, int range){
+    name = "Cavalry";
+    health = 2;
+    attack = 2;
+    movement = 8;
+    range = 1;
+    
+}   
+}
+
+-------------------------------------------------
+
+package ancientruins.units;
+
+
+final public class Knight extends mainUnit {
+    private String name;
+    private int health;
+    private int attack;
+    private int movement;
+    private int range;
+    
+    
+public Knight (){
+    super();
+    name = "";
+    health = 0;
+    attack = 0;
+    movement = 0;
+    range = 0;
+}
+
+public Knight (String name, int health, int attack, int movement, int range){
+    name = "Knight";
+    health = 4;
+    attack = 2;
+    movement = 5;
+    range = 1;
+}
+}
+
+-------------------------------------------------
+
+package ancientruins.units;
+
+
+final public class Mage extends mainUnit {
+    private String name;
+    private int health;
+    private int attack;
+    private int movement;
+    private int range;
+    private boolean magic;
+    
+    
+public Mage (){
+    super();
+    name = "";
+    health = 0;
+    attack = 0;
+    movement = 0;
+    range = 0;
+    magic = true;
+}
+
+public Mage (String name, int health, int attack, int movement, int range, boolean magic){
+    name = "Mage";
+    health = 2;
+    attack = 1;
+    movement = 6;
+    range = 2;
+    magic = true;
+    
+    
+}   
+}
+
+---------------------------------------------------------------
+
+package ancientruins.units;
+
+
+final public class Mercenary extends mainUnit {
+    private String name;
+    private int health;
+    private int attack;
+    private int movement;
+    private int range;
+    private boolean counter;
+    
+    
+public Mercenary (){
+    super();
+    name = "";
+    health = 0;
+    attack = 0;
+    movement = 0;
+    range = 0;
+    counter = true;
+}
+
+public Mercenary (String name, int health, int attack, int movement, int range, boolean counter){
+    name = "Mercenary";
+    health = 2;
+    attack = 2;
+    movement = 6;
+    range = 1;
+    counter = true;
+    
+}   
+}
+
+-----------------------------------------------------------------------
+
+package ancientruins.units;
+
+public class mainUnit {   
+    protected String name;
+    protected int health;
+    protected int attack;
+    protected int movement;
+    protected int range;
+    
+    public mainUnit(){
+        name = "";
+        health = 0;
+        attack  = 0;
+        movement = 0;
+        range = 0;
+    }
+    
+    public mainUnit(String name, int health, int attack, int movement, int range){
+        this.name = name;
+        this.health = health;
+        this.attack = attack;
+        this.movement = movement; 
+        this.range = range;
+    }
+    
+    public void keyPressed(KeyEvent ke){
+        if (ke.getKeyCode() == KeyEvent.VK_Left){
+            
+            moveLeft();
+        }
+        
+        if (ke.getKeyCode() == KeyEvent.VK_Right){
+            
+            moveRight();
+        }
+        
+        if (ke.getKeyCode() == KeyEvent.VK_Down){
+            
+            moveDown();
+        }
+        
+        if (ke.getKeyCode() == KeyEvent.VK_Up){
+            
+            moveUp();
+        }              
+    }
+}
